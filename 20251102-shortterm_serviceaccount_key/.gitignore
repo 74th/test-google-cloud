@@ -1,0 +1,6 @@
+*.tfvars
+*.tfstate
+*.tfstate.backup
+*.hcl
+*/.terraform
+create-short-term-key/create-short-term-key

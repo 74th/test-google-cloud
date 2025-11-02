@@ -1,0 +1,22 @@
+{
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": ".."
+    },
+    "features": {
+        "ghcr.io/dhoeric/features/google-cloud-cli": { "version": "latest" },
+        "ghcr.io/devcontainers/features/go": { "version": "1.24.5" },
+        "ghcr.io/devcontainers/features/docker-in-docker": {}
+    },
+    "mounts": [
+        "source=${localEnv:HOME}/.aws/config,target=/home/vscode/.aws/config,type=bind,consistency=cached"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "hashicorp.terraform",
+                "golang.go"
+            ]
+        }
+    }
+}
